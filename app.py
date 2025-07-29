@@ -6,26 +6,15 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-# Setup for NLTK (download if not already available)
-nltk_path = 'nltk_data'
-nltk.data.path.append(nltk_path)
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt', download_dir=nltk_path)
-
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords', download_dir=nltk_path)
 
 ps = PorterStemmer()
 
 # Preprocessing function
+
 def transform_text(text):
     text = text.lower()
-    text = nltk.word_tokenize(text)
+    text = text.split()  # Use simple split instead of nltk.word_tokenize
 
     y = []
     for i in text:
@@ -46,6 +35,8 @@ def transform_text(text):
         y.append(ps.stem(i))
 
     return " ".join(y)
+
+
 
 # Load model and vectorizer
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
