@@ -4,6 +4,24 @@ import string
 from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
+nltk.download('punkt', download_dir='nltk_data')
+nltk.download('punkt')
+
+
+import os
+
+# Add your nltk_data path
+nltk_path = 'nltk_data'
+nltk.data.path.append(nltk_path)
+
+# Check if 'punkt' is already available
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', download_dir=nltk_path)
+
+
+
 
 ps = PorterStemmer()
 
