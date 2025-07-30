@@ -40,7 +40,7 @@ Check out the live demo [here](https://sms-email-spam-classifier-c2udcvz62tgshzq
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/your_repository.git
+   https://github.com/Nitinpawar-9/Email-Span-Classification
    ```
 
 2. Navigate to the project directory:
@@ -70,8 +70,4 @@ Check out the live demo [here](https://sms-email-spam-classifier-c2udcvz62tgshzq
 ## Contributing
 
 Contributions are welcome! Please feel free to open a pull request or submit an issue with any suggestions or improvements.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
